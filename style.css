@@ -18,6 +18,91 @@ body{
     z-index: 0;
 }
 
+.contener .title,
+.contener .subtitle,
+.contener .btndown{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes showContent{
+    to{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+
+.contener .subtitle{
+    animation-delay: 1.2s;
+}
+.contener .btndown{
+    animation-delay: 1.4s;
+}
+
+.download .contener1 .head,
+.download .contener1 .para,
+.img .cont h1,
+.img .cont p,
+.img .cont button{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+.download .contener1 .para{
+    animation-delay: 1.2s;
+}
+.img .cont h1{
+    animation-delay: 1.4s;
+}
+.img .cont p{
+    animation-delay: 1.6s;
+}
+.img .cont button{
+    animation-delay: 1.8s;
+}
+
+.Help h1,.Help p,.Help button{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+.Help p{
+    animation-delay: 1.2s;
+}
+.Help button{
+    animation-delay: 1.4s;
+}
+
+.info .div h1,.info .div p{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+.info p{
+    animation-delay: 1.2s;
+}
+
+footer img,
+footer .navbar{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+footer .navbar {
+    animation-delay: 1.2s;
+}
+
 .overlay{
     position: absolute;
     top: 0;
@@ -115,12 +200,6 @@ hr{
 
 .img img{
     width: 250px;
-}
-
-.img img:hover{
-    transform: scale(1.2);
-    margin-top: 50px;
-    margin-bottom: 50px;
 }
 
 .cont h1{
@@ -351,4 +430,117 @@ footer img{
 
 .ok{
     margin-left: 40px;
+}
+
+.boder{
+    width: 500px;
+    background-color: white;
+    
+}
+
+@media (max-width : 1893px ) {
+    .card{
+        border:3px solid black;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 45px;
+        background-color: rgba(0, 0, 0, 0.122);
+        text-align: center;
+    }
+}
+
+@media (max-width :1520px ) {
+    nav{
+        gap: 600px;
+    }
+}
+
+@media (max-width :1420px ) {
+    nav{
+        gap: 500px;
+    }
+    .Home{
+        padding-bottom: 80px;
+    }
+}
+
+@media (max-width :1310px ) {
+    nav{
+        gap: 400px;
+    }
+    .Home{
+        padding-bottom: 60px;
+    }
+    .card{
+        width: 200px;
+        height: 380px;
+    }
+    .card p{
+        font-size: 13px;
+    }
+    video{
+        width: 700px;
+    }
+    .Help{
+        padding-top: 80px;
+        padding-bottom: 80px;
+        gap: 80px;
+    }
+    .cont img{
+        width: 200px;
+    }
+    .cont button{
+        margin-right: 30px;
+    }
+    .Home .contener .title{
+        font-size: 35px;
+    }
+    .Home .contener .subtitle{
+        font-size: 25px;
+    }
+    .Home img{
+        width: 450px;
+    }
+    .Home{
+        margin-top: 20px;
+    }
+}
+
+@media (max-width :1207px ) {
+    nav{
+        gap: 300px;
+    }
+    video{
+        width: 650px;
+    }
+    .Help p{
+        font-size: 15px;
+    }
+    .Help{
+        padding-top: 70px;
+        padding-bottom: 70px;
+        gap: 40px;
+    }
+}
+
+@media (max-width :1150px ) {
+    nav{
+        gap: 300px;
+    }
+    video{
+        width: 600px;
+    }
+    .Help p{
+        font-size: 14px;
+    }
+    .Help h1{
+        font-size: 22px;
+    }
+    .Help{
+        padding-top: 70px;
+        padding-bottom: 70px;
+        gap: 40px;
+    }
 }
