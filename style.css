@@ -80,7 +80,7 @@ body{
     animation-delay: 1.4s;
 }
 
-.info .div h1,.info .div p{
+.info .div h1,.info .div p,.div h1 hr{
     transform: translateY(50px);
     filter: blur(20px);
     opacity: 0;
@@ -90,6 +90,11 @@ body{
 .info p{
     animation-delay: 1.2s;
 }
+
+.div h1 hr{
+    animation-delay: 1.3s;
+}
+
 
 footer img,
 footer .navbar{
@@ -250,7 +255,7 @@ a{
     letter-spacing: 0.5px;
 }
 
-a::after{
+a.on::after{
     content: '';
     position: absolute;
     background-color: rgb(249, 60, 60);
@@ -261,7 +266,7 @@ a::after{
     transition: 0.3s;
 }
 
-a:hover::after{
+a.on:hover::after{
     width: 100%;
 }
 
@@ -279,7 +284,35 @@ nav{
     align-items: center;
     gap: 700px;
     position: absolute;
-    z-index: 2
+    z-index: 100000;
+}
+
+nav.stcy{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    transition: 0.6s;
+    z-index: 100000;
+}
+
+.stcy{
+    background-color: rgb(249, 60, 60);
+    padding-right: 7.5%;
+}
+
+.stcy ul a{
+    color: white;
+}
+
+.stcy ul .navbutton{
+    color: white;
+    border: 3px solid white;
+}
+
+.stcy h1{
+    color: white;
 }
 
 nav ul{
@@ -362,6 +395,10 @@ nav ul{
     width: 100px;
 }
 
+.card .p1 {
+    margin-top: -15px;
+}
+
 .infosub{
     align-items: center;
     justify-content: center;
@@ -382,10 +419,7 @@ nav ul{
 
 .card{
     border:3px solid black;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    width: 350px;
     border-radius: 45px;
     background-color: rgba(0, 0, 0, 0.122);
     text-align: center;
@@ -438,6 +472,18 @@ footer img{
     
 }
 
+.brake{
+    display: none;
+}
+
+.sidebar a{
+    color: black;
+}
+
+.foot{
+    display: none;
+}
+
 @media (max-width : 1893px ) {
     .card{
         border:3px solid black;
@@ -460,6 +506,9 @@ footer img{
 @media (max-width :1420px ) {
     nav{
         gap: 500px;
+    }
+    .stcy{
+        padding-right: 8.5%;
     }
     .Home{
         padding-bottom: 80px;
@@ -523,6 +572,9 @@ footer img{
         padding-bottom: 70px;
         gap: 40px;
     }
+    .stcy{
+        padding-right: 10%;
+    }
 }
 
 @media (max-width :1150px ) {
@@ -543,4 +595,448 @@ footer img{
         padding-bottom: 70px;
         gap: 40px;
     }
+}
+
+@media (max-width :1120px ) {
+    nav{
+        gap: 200px;
+    }
+    .Home .contener .title{
+        font-size: 25px;
+    }
+    .Home .contener .subtitle{
+        font-size: 19px;
+    }
+    .cont p{
+        font-size: 13px;
+        font-weight: 600;
+    }
+}
+
+@media (max-width : 980px ) {
+    nav{
+        gap: 100px;
+    }
+    .cont p{
+        font-size: 10px;
+        font-weight: 600;
+    }
+    .cont h1{
+        font-size: 15px;
+    }
+    video{
+        width: 500px;
+    }
+    .card p{
+        font-size: 13px;
+    }
+    .card{
+        width: 140px;
+        height: 320px;
+        padding-bottom: 20px;
+    }
+}
+@media (max-width :920px ) {
+    nav{
+        gap: 50px;
+    }
+    .Home{
+        gap: 0px;
+    }
+    .Home img{
+        width: 400px;
+    }
+    .Home{
+        padding-bottom: -100px;
+    }
+    .cont img{
+        width: 150px;
+    }
+    .cont button{
+        width: 130px;
+        font-size: 12px;
+    }
+    .card p{
+        font-size: 11px;
+    }
+}
+@media (max-width :840px ) {
+    nav{
+        gap: 20px;
+    }
+    nav ul{
+        gap: 30px;
+    }
+    .Home{
+        gap: 0px;
+    }
+    .Home img{
+        width: 380px;
+    }
+    nav h1{
+        font-size: 20px;
+    }
+    .Home .contener .title{
+        font-size: 24px;
+    }
+    .Home .contener .subtitle{
+        font-size: 18px;
+    }
+    .stcy{
+        padding-right: 14.7%;
+    }
+}
+@media (max-width :765px ) {
+    .Home img{
+        width: 300px;
+        margin-top: 50px;
+    }
+    video{
+        width: 300px;
+    }
+    .Home .contener .title{
+        font-size: 24px;
+    }
+    .Home .contener .subtitle{
+        font-size: 18px;
+    }
+    .Help{
+        gap: 30px;
+    }
+    .Help p{
+        font-size: 12px;
+    }
+    .Help button{
+        width: 120px;
+        font-size: 13px;
+    }
+    .card img{
+        width: 80px;
+    }
+    .card{
+        width: 120px;
+        height: 290px;
+    }
+    footer p{
+        font-size: 15px;
+    }
+    .cont p{
+        font-size: 8px;
+        font-weight: 700;
+    }
+    .img{
+        gap: 20px;
+    }
+}
+@media (max-width :710px ) {
+    .navbutton{
+        width: 100px;
+        font-size: 10px;
+    }
+    .br{
+        display: none;
+    }
+    .card .p1{
+        margin-top: -0px;
+    }
+    .card .dr{
+        margin-top: -15px;
+    }
+    .card{
+        height: 245px;
+    }
+    .infosub{
+        gap: 50px;
+    }
+    .brake{
+        display: auto;
+    }
+
+}
+@media (max-width :690px ) {
+    nav h1{
+        margin-left: -0px ;
+    }
+    .Home .contener .title{
+        font-size: 20px;
+    }
+    .Home .contener .subtitle{
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    video{
+       width:250px ;
+       height: 150px;
+    }
+}
+@media (max-width :645px ) {
+    nav h1{
+        display: none;
+    }
+    .navbutton{
+        margin-left: 100px;
+    }
+    .Home .contener .title{
+        font-size: 18px;
+    }
+    .Home .contener .subtitle{
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    .Home img{
+        width: 250px;
+    }
+    video{
+        align-items: center;
+        justify-content: center;
+        width: 450px;
+        height: 250px;
+    }
+    .Help{
+        display: block;
+    }
+    .head{
+        font-size: 16px;
+    }
+    .para{
+        font-size: 13px;
+    }
+    .cont img{
+        width: 100px;
+    }
+    .cont p{
+        display: none;
+    }
+
+}
+@media (max-width :605px ) {
+    .card img{
+        width: 60px;
+    }
+    .chanel{
+        display: none;
+    }
+    .cont button{
+        width: 100px;
+    }
+    footer p{
+        font-size: 13px;
+    }
+    .navbutton{
+        margin-left: 50px;
+    }
+}
+@media (max-width :540px ) {
+    .Home .contener .title{
+        font-size: 16px;
+    }
+    .Home .contener .subtitle{
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    .btndown{
+        width: 120px;
+    }
+    .Home img{
+        width: 200px;
+    }
+    footer hr{
+        display: none;
+    }
+}
+@media (max-width :525px ) {
+    .navbutton{
+        margin-left: 2px;
+    }
+    video{
+        width: 350px;
+        height: 200px;
+    }
+    footer p{
+        font-size: 10px;
+    }
+    .para{
+        font-size: 10px;
+    }
+    .download .img{
+        gap: 00px;
+    }
+}
+@media (max-width :475px ) {
+    .navbutton{
+        display: none;
+    }
+    nav ul{
+        align-items: center;
+        justify-content: center;
+    }
+    .stcy{
+        padding-right: 22%;
+    }
+}
+@media (max-width :470px ) {
+    footer p{
+        display: none;
+    }
+    .Home img{
+        width: 150px;
+    }
+    footer img{
+        width: 15px;
+    }
+    footer ul{
+        font-size: 10px;
+    }
+    .cont button{
+        width: 80px;
+        font-size: 8px;
+        height: 30px;
+    }
+    .stcy{
+        padding-right: 28.5%;
+    }
+}
+@media (max-width :420px ) {
+    .Home .contener .title{
+        font-size: 14px;
+    }
+    .Home .contener .subtitle{
+        font-size: 10px;
+        margin-bottom: 20px;
+        margin-top: 2px;
+    }
+}
+@media (max-width :405px ) {
+    .web{
+        display: none;
+    }
+    video{
+        width: 300px;
+        height: 160px;
+    }
+    .para{
+        display: none;
+    }
+    .head{
+        margin-bottom: -50px;
+    }
+    .cont img{
+        width: 80px;
+    }
+    .cont button{
+        width: 60px;
+        font-size: 8px;
+        height: 25px;
+    }
+}
+@media (max-width :380px ) {
+    .Home .contener .title{
+        font-size: 12px;
+    }
+    .Home .contener .subtitle{
+        font-size: 9px;
+        margin-bottom: 20px;
+        margin-top: 2px;
+    }
+    nav a{
+        font-size: 12px;
+    }
+    .Home button{
+        width: 80px;
+        font-size: 8px;
+        height: 25px;
+    }
+}
+@media (max-width :350px ) {
+    .Home .contener .title{
+        font-size: 12px;
+    }
+    .Home .contener .subtitle{
+        font-size: 9px;
+        margin-bottom: 20px;
+        margin-top: 2px;
+    }
+    nav a{
+        font-size: 12px;
+    }
+    .Home img{
+        width: 120px;
+    }
+    nav a{
+        font-size: 10px;
+    }
+    footer ul{
+        display: none;
+        padding-bottom: -100px;
+    }
+    .foot{
+        display: block;
+        color: white;
+        font-size: 20px;
+        border-bottom: 3px solid rgb(249, 60, 60);
+    }
+}
+@media (max-width :321px ) {
+    video{
+        width: 200px;
+        height: 115px;
+    }
+    .Help button{
+        width: 90px;
+        font-size: 11px;
+        height: 25px;
+    }
+    .img{
+        display: block;
+    }
+    .cont p{
+        display: block;
+    }
+}
+
+@media (max-width :241px ) {
+    nav ul{
+        gap: 20px;
+    }
+    nav a{
+        font-size: 8px;
+    }
+    .Home .contener .title{
+        font-size: 8px;
+    }
+    .Home .contener .subtitle{
+        font-size: 6px;
+        margin-bottom: 20px;
+        margin-top: 2px;
+    }
+}
+
+.hidden{
+    opacity: 0;
+    transition: all 2s;
+    filter: blur(5px);
+    transform: translateX(-100%);
+}
+
+@media (prefer-reduced-motion) {
+    .hidden{
+        transition: none;
+    }
+    .show{
+        transition: none;
+    }
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.web{
+    transition-delay: 200ms;
+}
+
+.chanel{
+    transition-delay: 600ms;
 }
