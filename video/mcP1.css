@@ -1,0 +1,706 @@
+nav{
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 650px;
+    position: absolute;
+    color: white;
+    padding-left: 2%;
+}
+
+.link a{
+    text-decoration: none;
+    color: white;
+    align-items: center;
+}
+
+.nav1{
+    margin-left: 30px;
+}
+
+.download{
+    margin-left: 20px;
+    width: 150px;
+    height: 40px;
+    border-radius: 45px;
+    border: 3px solid white;
+    font-size: 14px;
+    background-color: black;
+    color: white;
+}
+
+.download:hover{
+    background-color: rgb(249, 60, 60);
+    border: none;
+    transition: all 0.5s;
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+    font-family:"Poppins", sans-serif;
+}
+
+.title{
+    color: black;
+}
+
+.name{
+    color: black;
+}
+
+.card{
+    background-color: rgba(83, 83, 83, 0.227);
+    width: 250px;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 45px;
+}
+
+.container{
+    background-color: white;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin-left: -1%;
+    margin-right: -0.51%;
+}
+
+.set{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+hr{
+    width: 100px;
+    height: 4px;
+    border: none;
+    border-radius: 45px;
+    background-color: rgb(249, 60, 60);
+}
+
+.cast{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 30px;
+}
+
+video{
+    width: 1000px;
+    margin-top: 80px;
+    padding-bottom: 50px;
+}
+
+nav.stcy{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    transition: 0.6s;
+    z-index: 100000;
+}
+
+.stcy{
+    background-color: rgb(249, 60, 60);
+    padding-right: 2.1%;
+}
+
+.stcy button{
+    background-color: transparent;
+}
+
+.stcy .download:hover{
+    border: 3px solid white;
+}
+
+.hidden{
+    opacity: 0;
+    transition: all 2s;
+    filter: blur(5px);
+    transform: translateX(-100%);
+}
+
+@media (prefer-reduced-motion) {
+    .hidden{
+        transition: none;
+    }
+    .show{
+        transition: none;
+    }
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.card:nth-child(2){
+    transition-delay: 200ms;
+}
+
+.card:nth-child(3){
+    transition-delay: 400ms;
+}
+
+.card:nth-child(4){
+    transition-delay: 600ms;
+}
+
+.container .set{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent 0.5s 1s linear 1 forwards;
+}
+
+@keyframes showContent{
+    to{
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+
+a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 0.5px;
+}
+
+a.on::after{
+    content: '';
+    position: absolute;
+    background-color: rgb(249, 60, 60);
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+    border-radius: 45px;
+}
+
+a.on:hover::after{
+    width: 100%;
+}
+
+.stcy a.on::after{
+    content: '';
+    position: absolute;
+    background-color: white;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+    border-radius: 45px;
+}
+
+.stcy a.on:hover::after{
+    width: 100%;
+}
+
+.off{
+    display: none;
+}
+
+.fake{
+    background-color: rgba(255, 255, 255, 0.473);
+    flex-direction: column;
+    top: 0;
+    margin-left: 50%;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: none;
+    position: absolute;
+    width: 50%;
+    padding-bottom: 810px;
+    backdrop-filter: blur(5px);
+    z-index: 10000;
+    padding-top: 90px;
+}
+
+.menu{
+    display: none;
+}
+
+.close{
+    display: none;
+}
+
+.fake a{
+    color: black;
+    font-weight: 600;
+}
+
+.more{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 40px;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+    border: 3px solid white;
+    border-radius: 45px;
+}
+
+.more:hover, .more:active, .more:visited{
+ background-color: rgb(249, 60, 60) ;
+ border: none;
+ box-shadow: 0 6px 3px rgba(0, 0, 0, 0.516);
+ transition-timing-function:cubic-bezier(0.6, 4, 0.3, 0.8) ;
+ animation: gelatine 0.5s 1;
+}
+
+.stcy .download:hover{
+    box-shadow: 0 6px 3px rgba(0, 0, 0, 0.516);
+    border: none;
+}
+
+.footer{
+ background-color:#ffffff17;
+}
+
+@keyframes gelatine{
+    0%,100%{
+        transform: scale(1,1);
+    }
+    25%{
+        transform: scale(0.9, 1.1);
+    }
+    50%{
+        transform: scale(1.1, 0.9);
+    }
+    75%{
+        transform: scale(0.95, 1.05);
+    }
+}
+
+@media (max-width : 1472px) {
+    nav{
+        gap: 550px;
+    }
+    .stcy{
+        background-color: rgb(249, 60, 60);
+        width: 97.5%;
+    }
+}
+
+@media (max-width : 1370px) {
+    .stcy{
+        background-color: rgb(249, 60, 60);
+        width: 97.5%;
+    }
+    nav{
+        gap: 500px;
+    }
+}
+
+@media (max-width : 1320px) {
+    .stcy{
+        background-color: rgb(249, 60, 60);
+        width: 97.5%;
+    }
+    nav{
+        gap: 450px;
+    }
+}
+
+@media (max-width : 1282px) {
+    .stcy{
+        background-color: rgb(249, 60, 60);
+        width: 97.5%;
+    }
+    nav{
+        gap: 420px;
+    }
+}
+
+@media (max-width : 1272px) {
+    .stcy{
+        background-color: rgb(249, 60, 60);
+        width: 97.5%;
+    }
+    nav{
+        gap: 400px;
+    }
+}
+
+@media (max-width : 1222px) {
+    .stcy{
+        background-color: rgb(249, 60, 60);
+        width: 97.5%;
+    }
+    nav{
+        gap: 350px;
+    }
+}
+
+@media (max-width : 1170px) {
+    .stcy{
+        background-color: rgb(249, 60, 60);
+        width: 97.5%;
+    }
+    nav{
+        gap: 300px;
+    }
+    .card{
+        width: 200px;
+        height: 240px;
+    }
+    .card img{
+        width: 80px;
+        height: 80px;
+    }
+
+}
+
+@media (max-width : 1120px) {
+    .stcy{
+        background-color: rgb(249, 60, 60);
+        width: 97.5%;
+    }
+    nav{
+        gap: 250px;
+    }
+}
+
+@media (max-width : 1060px) {
+    .stcy{
+        background-color: rgb(249, 60, 60);
+        width: 97.5%;
+    }
+    nav{
+        gap: 200px;
+    }
+}
+
+@media (max-width : 1025px) {
+    .stcy{
+        background-color: rgb(249, 60, 60);
+        width: 97.5%;
+    }
+    nav{
+        gap: 150px;
+    }
+    video{
+        width: 800px;
+    }
+
+}
+
+@media (max-width : 976px) {
+    .stcy{
+        background-color: rgb(249, 60, 60);
+        width: 97.5%;
+    }
+    nav{
+        gap: 100px;
+    }
+    video{
+        width: 800px;
+    }
+
+}
+
+@media (max-width : 970px) {
+    .card{
+        width: 150px;
+    }
+    .name{
+        font-size: 13px;
+    }
+    .title{
+        font-size: 20px;
+    }
+}
+
+@media (max-width : 915px) {
+    nav{
+        gap: 50px;
+    }
+}
+
+@media (max-width : 865px) {
+    nav{
+        gap: 100px;
+    }
+    .off{
+        display: block;
+        margin-bottom: 50px;
+        width: 250px;
+        height: 50px;
+    }
+    .on1 {
+        display: none;
+    }
+    video{
+        width: 700px;
+    }
+}
+
+@media (max-width : 785px) {
+    .cast{
+        gap: 20px;
+    }
+    .title{
+        font-size: 18px;
+    }
+}
+
+
+@media (max-width : 735px) {
+    nav{
+        gap: 50px;
+    }
+    video{
+        width: 600px;
+    }
+}
+
+@media (max-width : 715px) {
+    .fake.go{
+        display: flex;
+    }
+    .real a{
+        display: none;
+    }
+    .real.stcy{
+        display: none;
+    }
+    .real h1{
+        display: block;
+    }
+    .real{
+        display: flex;
+    }
+    .fake h1{
+        color: white;
+    }
+    .menu{
+        top: 20px;
+        left: 500px;
+        display: block;
+        position: absolute;
+    }
+    .close.ok{
+        display: block;
+        left: 580px;
+        top: 20px;
+        position: absolute;
+        z-index: 10000000;
+    }
+
+}
+
+@media (max-width : 676px) {
+    .cast{
+        display: flex;
+        flex-direction: column;
+    }
+    .card{
+        width: 250px;
+        height: 250px;
+    }
+    .card img{
+        width: 100px;
+        height: 100px;
+    }
+    .fake{
+        padding-bottom: 1700px;
+    }
+}
+
+@media (max-width : 625px) {
+    video{
+        width: 500px;
+    }
+}
+
+@media (max-width : 600px) {
+    .close.ok{
+        left: 520px;
+        top: 20px;
+    }
+}
+   
+
+@media (max-width : 566px) {
+    .menu{
+        top: 20px;
+        left: 450px;
+    }
+    .close.ok{
+        left: 500px;
+        top: 20px;
+    }
+    .fake{
+        padding-bottom: 1650px;
+    }
+}
+
+@media (max-width : 520px) {
+    .menu{
+        top: 20px;
+        left: 420px;
+    }
+    .close.ok{
+        left: 450px;
+        top: 20px;
+    }
+    .fake{
+        padding-bottom: 1600px;
+    }
+    video{
+        width: 400px;
+    }
+}
+
+@media (max-width : 485px) {
+    .menu{
+        top: 20px;
+        left: 380px;
+    }
+    .close.ok{
+        left: 400px;
+        top: 20px;
+    }
+}
+
+@media (max-width : 440px) {
+    .menu{
+        top: 20px;
+        left: 350px;
+    }
+    .close.ok{
+        left: 380px;
+        top: 20px;
+    }
+    video{
+        width: 350px;
+    }
+}
+
+@media (max-width : 400px) {
+    .menu{
+        top: 20px;
+        left: 300px;
+    }
+    .close.ok{
+        left: 320px;
+        top: 20px;
+    }
+    video{
+        width: 350px;
+    }
+}
+
+@media (max-width : 360px) {
+    .menu{
+        top: 20px;
+        left: 280px;
+    }
+    .close.ok{
+        left: 300px;
+        top: 20px;
+    }
+    video{
+        width: 300px;
+    }
+}
+
+@media (max-width : 330px) {
+    .menu{
+        top: 20px;
+        left: 250px;
+    }
+    .close.ok{
+        left: 280px;
+        top: 20px;
+    }
+    video{
+        width: 300px;
+    }
+}
+
+@media (max-width : 281px) {
+    .menu{
+        top: 20px;
+        left: 200px;
+    }
+    .close.ok{
+        left: 230px;
+        top: 20px;
+    }
+    .nav1{
+        margin-left: -5px;
+    }
+    video{
+        width: 250px;
+    }
+    .download{
+        width: 200px;
+    }
+    nav h1{
+        font-size: 20px;
+    }
+    .card{
+        width: 200px;
+        height: 200px;
+    }
+    .card h1{
+        font-size: 20px;
+    }
+    .card img{
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width : 245px) {
+    .menu{
+        top: 20px;
+        left: 200px;
+    }
+    .close.ok{
+        left: 280px;
+        top: 20px;
+    }
+    video{
+        width: 200px;
+    }
+    .download{
+        width: 200px;
+    }
+    nav h1{
+        font-size: 20px;
+    }
+    .card{
+        width: 200px;
+        height: 200px;
+    }
+    .card h1{
+        font-size: 20px;
+    }
+    .card img{
+        width: 60px;
+        height: 60px;
+    }
+}
+

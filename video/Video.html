@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
+    <link rel="stylesheet" href="Video.css">
+</head>
+<body>
+    <section class="section">
+        <div class="slider">
+            <button class="next arrow" onclick="nextSlide()">&#10095</button>
+            <div class="slides">
+                <center><h1 class="title">Dog and Steve</h1></center>
+                <span class="date">15/03/2024</span>
+                <h1 class="hover Smile">Dog And Steve epsode 1</h1>
+                <div class="context">
+                    <p>
+                        Step into a world where imagination knows no bounds, <br> and every frame tells a story story adout a dog and a man <br> Our channel is a kaleidoscope of colors, characters, and creativity, offering a delightful escape into the realm of minecraft. <br> From classic favorites to the latest releases, we showcase a diverse array of styles and genres, catering to fans of all ages.Join us as we journey through whimsical worlds,laugh with lovable characters, and marvel at the artistry behind each frame. Whether you're a die-hard animation enthusiast or simply seeking some animated escapism,you'll find something to captivate and entertain you here. So, grab your popcorn, and let the frist epsode minecraft adventure bigen!
+                    </p>
+                    <img src="../video/card/minecraft.jpg" alt="img" height="440px" class="mc">
+                </div>
+                    <a href="mcP1.html"><button class="btn">Watch Epsode 1</button></a>
+            </div>
+            <div class="slides">
+                <center><h1 class="title">Dog and Steve</h1></center>
+                <span class="date">12/02/2024</span>
+                <h1 class="hover Smile">Dog And Steve epsode 2</h1>
+                <div class="context">
+                    <p>
+                        Step into a world where imagination knows no bounds, <br> and every frame tells a story story adout a dog and a man <br> Our channel is a kaleidoscope of colors, characters, and creativity, offering a delightful escape into the realm of minecraft. <br> From classic favorites to the latest releases, we showcase a diverse array of styles and genres, catering to fans of all ages.Join us as we journey through whimsical worlds,laugh with lovable characters, and marvel at the artistry behind each frame. Whether you're a die-hard animation enthusiast or simply seeking some animated escapism,you'll find something to captivate and entertain you here. So, grab your popcorn, and let the seconde epsode minecraft adventure bigen!
+                    </p>
+                    <img src="../video/card/minecraft.jpg" alt="" height="440px" class="mc">
+                </div>
+                   <button class="btn">Watch Epsode 2</button>
+            </div>
+            <div class="slides">
+                <center><h1 class="title">Battel Claw</h1></center>
+                <span class="date">11/01/2024</span>
+                <h1 class="hover Kingsmen">Battel Claw</h1>
+                <div class="context">
+                    <p>
+                        Prepare your eyes <br> to watch amazing,compactefull sinhala dubbed battle claw trailer <br> Batte claw is about a world filled with amazing monsters. <br> if your a anime,cartoon or 2d animation fan this is a story for you. <br> Even comedy,adventure's or story lovers can enjoy it as well. <br> You can watch this in are youtube chanel or in are Dubbing zone app.Get ready for endless,unbodered,epic story world. <br> So click that white Watch Trailer button. <br> And get some popcoren ready and buckle up for the bigening of the show!
+                    </p>
+                    <img src="../video/card/battle.jpg" alt="img">
+                </div>
+                   <button class="btn trila">Watch The Trila</button>
+            </div>
+            <button class="prev arrow" onclick="prevSlide()">&#10094</button>
+        </div>
+    </section>
+
+    <footer>
+        <a href="../Index.html"><button class="back">Back</button></a>
+    </footer>
+
+    <script>
+        const slides = document.querySelectorAll('.slides');
+        let slideIndex = 0;
+        let intervalId = null;
+
+        document.addEventListener("DOMContentLoaded", initializeSlider);
+        function initializeSlider(){
+
+            if(slides.length > 0){
+                slides[slideIndex].classList.add("dispaySlibe");
+                intervalId = setInterval(nextSlide, 10000);
+            }
+
+        }
+
+        function showSlider(index) {
+            
+            if (index >= slides.length) {
+                slideIndex = 0;
+            }else if (index < 0){
+                slideIndex = slides.length -1;
+            }
+
+            slides.forEach(slide => {
+                slide.classList.remove("dispaySlibe");
+            });
+            slides[slideIndex].classList.add("dispaySlibe");
+        }
+
+        function prevSlide() {
+            clearInterval(intervalId);
+            slideIndex--;
+            showSlider(slideIndex);
+        }
+        function nextSlide() {
+            slideIndex++;
+            showSlider(slideIndex);
+        }
+    </script>
+</body>
+</html>
